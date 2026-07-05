@@ -1,0 +1,69 @@
+:root {
+    /* Colors */
+    --primary: #7C6CFF;
+    --primary-light: #A89BFF;
+    --secondary: #FF6070;
+    --secondary-light: #FF8A96;
+    --accent: #4ECDC4;
+    --accent-light: #7EDDD6;
+    --warning: #FFD93D;
+    --warning-light: #FFE680;
+    
+    /* Dark Theme */
+    --bg-primary: #060C24;
+    --bg-secondary: #0D1B3E;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-input: rgba(255, 255, 255, 0.04);
+    
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #D6D9E8;
+    --text-muted: #8A8FA8;
+    
+    /* Borders */
+    --border-light: rgba(255, 255, 255, 0.05);
+    --border-medium: rgba(255, 255, 255, 0.1);
+    --border-heavy: rgba(255, 255, 255, 0.15);
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 16px 60px rgba(0, 0, 0, 0.3);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    --bg-primary: #F8F6F3;
+    --bg-secondary: #FFFFFF;
+    --bg-card: rgba(0, 0, 0, 0.02);
+    --bg-input: rgba(0, 0, 0, 0.03);
+    
+    --text-primary: #1A1A2E;
+    --text-secondary: #4A4A6A;
+    --text-muted: #6B6B8A;
+    
+    --border-light: rgba(0, 0, 0, 0.05);
+    --border-medium: rgba(0, 0, 0, 0.08);
+    --border-heavy: rgba(0, 0, 0, 0.12);
+}

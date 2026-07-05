@@ -1,0 +1,396 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+    background: var(--bg-primary);
+    min-height: calc(100vh - 80px);
+    padding: 40px 20px;
+    transition: background 0.3s ease;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 4px 16px;
+    background: rgba(124, 108, 255, 0.1);
+    border: 1px solid rgba(124, 108, 255, 0.15);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #7C6CFF;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* =========================
+   WHY INFINPOST SECTION
+========================= */
+
+.about-why {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] .why-card {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 108, 255, 0.15);
+    background: var(--card-hover);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .why-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.why-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.15), rgba(255, 96, 112, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.why-icon {
+    font-size: 26px;
+    color: #7C6CFF;
+}
+
+.why-card h3 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.why-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+
+.about-features {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+[data-theme="light"] .feature-card {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 108, 255, 0.15);
+    background: var(--card-hover);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .feature-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.15), rgba(255, 96, 112, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.feature-icon {
+    font-size: 22px;
+    color: #7C6CFF;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================
+   CONTACT SECTION WITH FORM
+========================= */
+
+.about-contact {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+[data-theme="light"] .contact-content {
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+}
+
+.contact-email-display {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(124, 108, 255, 0.08);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(124, 108, 255, 0.1);
+}
+
+[data-theme="light"] .contact-email-display {
+    background: rgba(124, 108, 255, 0.06);
+}
+
+.contact-email-icon {
+    font-size: 24px;
+    color: #7C6CFF;
+}
+
+.contact-email-display h4 {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.contact-email-display p {
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-icon {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 12px 14px 12px 44px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: var(--bg-input);
+    color: var(--text-primary);
+    font-family: inherit;
+}
+
+[data-theme="light"] .input-wrapper input,
+[data-theme="light"] .input-wrapper textarea {
+    background: #f8f6f3;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+.input-wrapper textarea {
+    resize: vertical;
+    min-height: 120px;
+    padding-top: 14px;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus {
+    border-color: #7C6CFF;
+    outline: none;
+    background: var(--bg-input);
+    box-shadow: 0 0 30px rgba(124, 108, 255, 0.06);
+}
+
+[data-theme="light"] .input-wrapper input:focus,
+[data-theme="light"] .input-wrapper textarea:focus {
+    background: #ffffff;
+}
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+    color: var(--text-muted);
+}
+
+/* Submit Button */
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    background: linear-gradient(135deg, #7C6CFF, #FF6070);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(124, 108, 255, 0.3);
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.success-message span {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.success-message h3 {
+    font-size: 24px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.success-message p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .features-grid { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; gap: 18px; }
+    .section-header h2 { font-size: 28px; }
+    .contact-content { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+    .about-page { padding: 20px 10px; }
+    .about-why, .about-features, .about-contact { padding: 40px 10px; }
+    .contact-content { padding: 16px; }
+    .section-header h2 { font-size: 24px; }
+    .contact-email-display { flex-direction: column; text-align: center; }
+    .submit-btn { font-size: 14px; padding: 12px; }
+}

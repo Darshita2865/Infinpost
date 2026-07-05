@@ -1,0 +1,115 @@
+.trending {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+}
+
+.trending-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.fire-icon {
+    color: #FF6070;
+    font-size: 18px;
+    animation: firePulse 2s ease-in-out infinite;
+}
+
+.trending-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 22px;
+    background: var(--bg-card);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+[data-theme="light"] .tag {
+    background: #ffffff;
+    color: #4a4a6a;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tag:hover {
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.2), rgba(255, 96, 112, 0.15));
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(124, 108, 255, 0.15);
+    border-color: rgba(124, 108, 255, 0.2);
+}
+
+[data-theme="light"] .tag:hover {
+    background: linear-gradient(135deg, rgba(124, 108, 255, 0.1), rgba(255, 96, 112, 0.08));
+    color: #6C63FF;
+    border-color: #7C6CFF;
+    box-shadow: 0 8px 30px rgba(124, 108, 255, 0.1);
+}
+
+.tag:active {
+    transform: scale(0.95);
+}
+
+/* Different colors for each tag */
+.tag:nth-child(1):hover {
+    border-color: #7C6CFF;
+}
+
+.tag:nth-child(2):hover {
+    border-color: #FF6070;
+}
+
+.tag:nth-child(3):hover {
+    border-color: #4ECDC4;
+}
+
+.tag:nth-child(4):hover {
+    border-color: #FFD93D;
+}
+
+.tag:nth-child(5):hover {
+    border-color: #7C6CFF;
+}
+
+@keyframes firePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .trending {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 25px;
+    }
+    
+    .trending-header {
+        font-size: 14px;
+    }
+    
+    .tag {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+}
