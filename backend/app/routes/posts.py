@@ -3,7 +3,7 @@ from sqlalchemy import and_, or_, func
 from sqlalchemy.orm import Session
 from typing import List
 from app.database import get_db
-from backend.app.services.search_service import SearchService
+from app.services.search_service import SearchService
 from app.schemas.post import PostResponse
 
 router = APIRouter()
