@@ -3,8 +3,7 @@
 InfinPost is an AI-powered web application that aggregates posts from multiple social media platforms such as Instagram, LinkedIn, and Facebook into one place. It helps users search, discover, and analyze content using AI and ML.
 
 ---
-LIVE DEMO:
-https://infinpost-frontend1.onrender.com/
+
 
 #  Features
 
