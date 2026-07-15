@@ -1,6 +1,4 @@
 import pandas as pd
-
-# Sample Facebook posts about internships
 facebook_data = [
     {
         'platform': 'facebook',
@@ -49,10 +47,7 @@ facebook_data = [
     }
 ]
 
-# Create DataFrame
 df = pd.DataFrame(facebook_data)
-
-# Save to datasets folder
 output_path = r"C:\Users\Darshita\OneDrive\Desktop\infinpost\datasets\facebook_post.csv"
 df.to_csv(output_path, index=False)
 
