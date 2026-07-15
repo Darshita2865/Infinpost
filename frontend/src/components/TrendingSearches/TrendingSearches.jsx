@@ -5,13 +5,14 @@ import './TrendingSearches.css';
 function TrendingSearches() {
   const navigate = useNavigate();
 
-   const trending = [
+  const trending = [
     { id: 1, tag: "AI Internship" },
     { id: 2, tag: "Machine Learning" },
     { id: 3, tag: "Python Developer" },
     { id: 4, tag: "Data Science" },
     { id: 5, tag: "Software Developer" },
   ];
+
   const handleTagClick = (tag) => {
     navigate(`/results?q=${encodeURIComponent(tag)}`);
   };
@@ -29,7 +30,6 @@ function TrendingSearches() {
             className="tag"
             onClick={() => handleTagClick(item.tag)}
           >
-            <span className="tag-icon">{item.icon}</span>
             {item.tag}
           </button>
         ))}

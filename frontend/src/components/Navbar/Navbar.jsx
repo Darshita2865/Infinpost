@@ -7,7 +7,6 @@ import {
   FaChartBar, 
   FaSignInAlt, 
   FaUserPlus, 
-  FaUserCircle,
   FaSignOutAlt 
 } from 'react-icons/fa';
 import "./Navbar.css";
@@ -63,9 +62,9 @@ function Navbar() {
           <div className="auth-user">
             <Link to="/profile" className="profile-link">
               <div className="profile-avatar-mini">
-                {user?.name?.charAt(0) || 'U'}
+                {user?.name?.charAt(0) || user?.username?.charAt(0) || 'U'}
               </div>
-              <span className="username">{user?.name}</span>
+              <span className="username">{user?.name || user?.username}</span>
             </Link>
             <button className="logout-btn-mini" onClick={handleLogout} title="Logout">
               <FaSignOutAlt />

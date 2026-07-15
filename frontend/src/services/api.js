@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'http://localhost:8000/api';
 
 const api = axios.create({
   baseURL: API_URL,
@@ -23,51 +23,71 @@ api.interceptors.request.use(
   }
 );
 
-// Search posts
-export const searchPosts = async (query) => {
+// Auth endpoints
+export const registerUser = async (userData) => {
   try {
-    // Mock data - Replace with actual API call
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve([
-          { id: 1, platform: 'Instagram', title: 'AI Internship Opportunity', description: 'Exciting AI internship program for final year students...' },
-          { id: 2, platform: 'LinkedIn', title: 'Machine Learning Engineer Role', description: 'Looking for ML engineers with Python experience...' },
-          { id: 3, platform: 'Facebook', title: 'Data Science Community', description: 'Join our data science community for networking...' },
-        ]);
-      }, 1000);
+    const response = await api.post('/auth/register', userData);
+    return response.data;
+  } catch (error) {
+    throw error.response?.data || error.message;
+  }
+};
+
+export const loginUser = async (credentials) => {
+  try {
+    const formData = new FormData();
+    formData.append('username', credentials.email);
+    formData.append('password', credentials.password);
+    
+    const response = await api.post('/auth/login', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
     });
-  } catch (error) {
-    throw error.response?.data || error.message;
-  }
-};
-
-// Get trending searches
-export const getTrendingSearches = async () => {
-  try {
-    const response = await api.get('/trending');
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
   }
 };
 
-// Get user profile
-export const getUserProfile = async () => {
+export const getCurrentUser = async () => {
   try {
-    const response = await api.get('/profile');
+    const response = await api.get('/auth/me');
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
   }
 };
 
-// Update user profile
-export const updateUserProfile = async (data) => {
+export const updateProfile = async (data) => {
   try {
     const response = await api.put('/profile', data);
     return response.data;
   } catch (error) {
     throw error.response?.data || error.message;
+  }
+};
+
+// Search endpoints
+export const searchPosts = async (query, platform = null) => {
+  try {
+    const params = { q: query };
+    if (platform) params.platform = platform;
+    console.log('🔍 Searching for:', query);
+    const response = await api.get('/search/', { params });
+    console.log('✅ Search response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('❌ Search error:', error);
+    throw error.response?.data || { error: 'Failed to fetch results' };
+  }
+};
+
+export const getTrendingSearches = async () => {
+  try {
+    const response = await api.get('/search/trending');
+    return response.data;
+  } catch (error) {
+    console.error('Trending error:', error);
+    return [];
   }
 };
 
