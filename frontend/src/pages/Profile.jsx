@@ -91,7 +91,6 @@ function Profile() {
     navigate('/');
   };
 
-  // Calculate age from birthdate
   const calculateAge = (birthdate) => {
     if (!birthdate) return 'Not set';
     const today = new Date();
