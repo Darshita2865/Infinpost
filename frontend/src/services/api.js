@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
+
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
+
+console.log('🔗 API URL:', API_URL); 
 
 const api = axios.create({
   baseURL: API_URL,
@@ -9,7 +12,7 @@ const api = axios.create({
   },
 });
 
-// Add token to requests
+
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -23,7 +26,7 @@ api.interceptors.request.use(
   }
 );
 
-// Auth endpoints
+
 export const registerUser = async (userData) => {
   try {
     const response = await api.post('/auth/register', userData);
@@ -66,7 +69,7 @@ export const updateProfile = async (data) => {
   }
 };
 
-// Search endpoints
+
 export const searchPosts = async (query, platform = null) => {
   try {
     const params = { q: query };
