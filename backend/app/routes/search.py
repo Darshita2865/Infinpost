@@ -6,14 +6,10 @@ import pandas as pd
 import os
 
 router = APIRouter()
-
-# Load data from CSV files
 def load_posts_from_csv():
     all_posts = []
     datasets_folder = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'datasets')
-    
-    # Try to load from datasets folder
-    csv_files = [
+        csv_files = [
         os.path.join(datasets_folder, 'facebook_post.csv'),
         os.path.join(datasets_folder, 'instagram_post.csv'),
         os.path.join(datasets_folder, 'linkedin_post.csv'),
@@ -24,7 +20,6 @@ def load_posts_from_csv():
         if os.path.exists(file_path):
             try:
                 df = pd.read_csv(file_path)
-                # Add platform info if not present
                 if 'platform' not in df.columns:
                     if 'facebook' in file_path.lower():
                         df['platform'] = 'facebook'
@@ -38,7 +33,6 @@ def load_posts_from_csv():
     
     return all_posts
 
-# Fallback mock data if no CSV files found
 MOCK_POSTS = [
     {
         "id": 1,
@@ -133,18 +127,14 @@ async def search_posts(
     try:
         print(f"🔍 Searching for: {q}, platform: {platform}")
         
-        # Try to load from CSV first
         posts = load_posts_from_csv()
         
-        # If no posts from CSV, use mock data
         if not posts:
             posts = MOCK_POSTS.copy()
         
-        # Filter by platform if specified
         if platform:
             posts = [p for p in posts if p.get("platform", "").lower() == platform.lower()]
         
-        # Filter by search query
         if q:
             q_lower = q.lower()
             posts = [
@@ -154,7 +144,6 @@ async def search_posts(
                    q_lower in str(p.get("text", "")).lower()
             ]
         
-        # Apply limit
         posts = posts[:limit]
         
         print(f"✅ Found {len(posts)} results")
