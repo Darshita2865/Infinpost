@@ -1,6 +1,4 @@
-/* =========================
-   ABOUT PAGE
-========================= */
+/*  ABOUT PAGE */
 
 .about-page {
     background: var(--bg-primary);
@@ -9,9 +7,7 @@
     transition: background 0.3s ease;
 }
 
-/* =========================
-   SECTION HEADER
-========================= */
+/* SECTION HEADER */
 
 .section-header {
     text-align: center;
@@ -46,9 +42,7 @@
     line-height: 1.6;
 }
 
-/* =========================
-   WHY INFINPOST SECTION
-========================= */
+/* WHY INFINPOST SECTION */
 
 .about-why {
     padding: 60px 20px;
@@ -116,9 +110,7 @@
     margin: 0;
 }
 
-/* =========================
-   FEATURES SECTION
-========================= */
+/* FEATURES SECTION */
 
 .about-features {
     padding: 60px 20px;
@@ -187,9 +179,7 @@
     margin: 0;
 }
 
-/* =========================
-   CONTACT SECTION WITH FORM
-========================= */
+/* CONTACT SECTION WITH FORM */
 
 .about-contact {
     padding: 60px 20px;
@@ -369,9 +359,7 @@
     font-size: 16px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
     .features-grid { grid-template-columns: repeat(2, 1fr); }
