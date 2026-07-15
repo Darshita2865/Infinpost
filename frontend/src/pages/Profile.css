@@ -10,7 +10,6 @@
     position: relative;
 }
 
-/* Back to Home Button */
 .back-home-btn-profile {
     position: absolute;
     top: -10px;
@@ -48,7 +47,6 @@
     margin-top: 20px;
 }
 
-/* Profile Avatar with Upload */
 .profile-avatar-wrapper {
     position: relative;
     display: inline-block;
@@ -128,7 +126,6 @@
     font-size: 16px;
 }
 
-/* Success Message */
 .success-message {
     background: rgba(78, 205, 196, 0.15);
     color: #4ECDC4;
