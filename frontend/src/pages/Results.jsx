@@ -43,7 +43,6 @@ function Results() {
     setSelectedPost(null);
   };
 
-  // Format date
   const formatDate = (dateString) => {
     if (!dateString) return 'Unknown date';
     try {
@@ -58,7 +57,7 @@ function Results() {
     }
   };
 
-  // Extract company name from post
+
   const getCompanyName = (post) => {
     if (post.company) return post.company;
     if (post.author) return post.author;
@@ -75,7 +74,6 @@ function Results() {
     return 'Unknown Company';
   };
 
-  // Extract apply link from post
   const getApplyLink = (post) => {
     if (post.apply_url) return post.apply_url;
     if (post.url) return post.url;
@@ -95,14 +93,12 @@ function Results() {
     return null;
   };
 
-  // Check if it's a job post
   const isJobPost = (post) => {
     const content = (post.content || post.text || '').toLowerCase();
     const jobKeywords = ['hiring', 'job', 'internship', 'opportunity', 'career', 'apply', 'opening', 'position', 'recruiting', 'vacancy'];
     return jobKeywords.some(keyword => content.includes(keyword));
   };
 
-  // Search company on Google
   const searchOnGoogle = (companyName) => {
     if (companyName && companyName !== 'Unknown Company') {
       const searchQuery = encodeURIComponent(`${companyName} careers jobs`);
@@ -110,7 +106,6 @@ function Results() {
     }
   };
 
-  // Search company on LinkedIn
   const searchOnLinkedIn = (companyName) => {
     if (companyName && companyName !== 'Unknown Company') {
       const searchQuery = encodeURIComponent(companyName);
