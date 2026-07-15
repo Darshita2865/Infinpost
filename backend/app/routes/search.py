@@ -9,7 +9,7 @@ router = APIRouter()
 def load_posts_from_csv():
     all_posts = []
     datasets_folder = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'datasets')
-        csv_files = [
+    csv_files = [  
         os.path.join(datasets_folder, 'facebook_post.csv'),
         os.path.join(datasets_folder, 'instagram_post.csv'),
         os.path.join(datasets_folder, 'linkedin_post.csv'),
