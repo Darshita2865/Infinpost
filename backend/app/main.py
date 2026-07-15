@@ -23,6 +23,8 @@ origins = [
     "http://localhost:5176",
     "http://localhost:5177",
     "http://localhost:3000",
+    "https://infinpost.onrender.com", 
+    "https://infinpost-frontend.onrender.com",  
 ]
 
 app.add_middleware(
