@@ -64,7 +64,6 @@ function About() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add API call to send email
     console.log('Form submitted:', formData);
     setSubmitted(true);
     setTimeout(() => {
