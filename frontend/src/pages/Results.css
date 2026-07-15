@@ -161,9 +161,7 @@
         gap: 8px;
     }
 }
-/* =========================
-   CLICKABLE CARDS
-========================= */
+/* CLICKABLE CARDS */
 
 .result-card.clickable {
     cursor: pointer;
@@ -193,9 +191,7 @@
     margin-top: 4px;
 }
 
-/* =========================
-   MODAL / POPUP
-========================= */
+/* MODAL */
 
 .modal-overlay {
     position: fixed;
@@ -357,9 +353,7 @@
     box-shadow: 0 8px 30px rgba(124, 108, 255, 0.3);
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ANIMATIONS */
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -377,9 +371,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE MODAL
-========================= */
+/* RESPONSIVE MODAL */
 
 @media (max-width: 768px) {
     .modal-content {
@@ -421,9 +413,7 @@
     }
 }
 
-/* =========================
-   JOB BADGE
-========================= */
+/* JOB BADGE */
 
 .job-badge {
     display: inline-block;
@@ -447,9 +437,7 @@
     margin-left: 10px;
 }
 
-/* =========================
-   MODAL ACTIONS
-========================= */
+/*  MODAL ACTIONS */
 
 .modal-actions {
     display: flex;
@@ -489,9 +477,7 @@
     text-align: center;
 }
 
-/* =========================
-   JOB TIPS SECTION
-========================= */
+/* JOB TIPS SECTION */
 
 .job-tips {
     margin-top: 16px;
@@ -523,17 +509,13 @@
     font-size: 14px;
 }
 
-/* =========================
-   MODAL AUTHOR - ENHANCED
-========================= */
+/* MODAL AUTHOR  */
 
 .modal-author strong {
     color: var(--text-primary);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
     .modal-actions {
@@ -699,9 +681,7 @@
     font-weight: 600;
 }
 
-/* =========================
-   EMPTY STATE
-========================= */
+/* EMPTY STATE */
 
 .empty-state {
     text-align: center;
@@ -724,9 +704,7 @@
     color: var(--text-muted);
 }
 
-/* =========================
-   ERROR MESSAGE
-========================= */
+/* ERROR MESSAGE */
 
 .error-message {
     max-width: 900px;
@@ -739,9 +717,7 @@
     text-align: center;
 }
 
-/* =========================
-   MODAL / POPUP
-========================= */
+/*  MODAL  */
 
 .modal-overlay {
     position: fixed;
@@ -798,9 +774,7 @@
     transform: rotate(90deg);
 }
 
-/* =========================
-   MODAL PLATFORM
-========================= */
+/* MODAL PLATFORM */
 
 .modal-platform {
     margin-bottom: 16px;
@@ -853,9 +827,7 @@
     line-height: 1.3;
 }
 
-/* =========================
-   MODAL AUTHOR - CLEAN VERSION
-========================= */
+/* MODAL AUTHOR  */
 
 .modal-author {
     display: flex;
@@ -897,9 +869,7 @@
     background: var(--border-color);
 }
 
-/* =========================
-   MODAL BODY
-========================= */
+/* MODAL BODY */
 
 .modal-body {
     margin-bottom: 20px;
@@ -913,9 +883,7 @@
     word-wrap: break-word;
 }
 
-/* =========================
-   MODAL STATS
-========================= */
+/* MODAL STATS */
 
 .modal-stats {
     display: flex;
@@ -943,9 +911,7 @@
     color: var(--text-primary);
 }
 
-/* =========================
-   MODAL ACTIONS
-========================= */
+/* MODAL ACTIONS */
 
 .modal-actions {
     display: flex;
@@ -999,9 +965,7 @@
     box-shadow: 0 8px 30px rgba(124, 108, 255, 0.3);
 }
 
-/* =========================
-   NO LINK MESSAGE
-========================= */
+/* NO LINK MESSAGE */
 
 .no-link-message {
     display: flex;
@@ -1043,9 +1007,7 @@
     transform: translateY(-2px);
 }
 
-/* =========================
-   JOB TIPS
-========================= */
+/* JOB TIPS */
 
 .job-tips {
     margin-top: 16px;
@@ -1077,9 +1039,7 @@
     font-size: 14px;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ANIMATIONS */
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -1097,9 +1057,7 @@
     }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/*  RESPONSIVE */
 
 @media (max-width: 768px) {
     .modal-content {
@@ -1226,9 +1184,7 @@
         font-size: 12px;
     }
 }
-/* =========================
-   SEARCH OPTIONS
-========================= */
+/* SEARCH OPTIONS */
 
 .no-link-message {
     display: flex;
@@ -1303,9 +1259,7 @@
     box-shadow: 0 8px 25px rgba(10, 102, 194, 0.4);
 }
 
-/* =========================
-   RESPONSIVE SEARCH OPTIONS
-========================= */
+/* RESPONSIVE SEARCH OPTIONS */
 
 @media (max-width: 768px) {
     .search-options {
