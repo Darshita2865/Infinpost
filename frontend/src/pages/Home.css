@@ -11,7 +11,6 @@
     transition: background 0.3s ease;
 }
 
-/* Colorful shapes with theme awareness */
 .colorful-shapes {
     position: absolute;
     top: 0;
@@ -64,7 +63,6 @@
     animation: float4 16s ease-in-out infinite alternate-reverse;
 }
 
-/* Light theme shapes opacity */
 [data-theme="light"] .shape {
     opacity: 0.04;
 }
