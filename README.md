@@ -49,45 +49,155 @@ InfinPost is an AI-powered web application that aggregates posts from multiple s
 InfinPost/
 │
 ├── backend/
-│   ├── app/
-│   ├── routes/
-│   ├── models/
-│   ├── services/
-│   ├── database/
-│   └── main.py
+│ ├── app/
+│ │ ├── init.py
+│ │ ├── main.py # FastAPI entry point
+│ │ ├── config.py # Configuration settings
+│ │ ├── database.py # Database connection
+│ │ │
+│ │ ├── models/ # Database models
+│ │ │ ├── init.py
+│ │ │ ├── user.py # User model
+│ │ │ ├── post.py # Post model
+│ │ │ └── search.py # Search history model
+│ │ │
+│ │ ├── schemas/ # Pydantic schemas
+│ │ │ ├── init.py
+│ │ │ ├── user.py # User schemas
+│ │ │ └── post.py # Post schemas
+│ │ │
+│ │ ├── routes/ # API routes
+│ │ │ ├── init.py
+│ │ │ ├── auth.py # Authentication routes
+│ │ │ ├── search.py # Search routes
+│ │ │ ├── profile.py # Profile routes
+│ │ │ └── posts.py # Posts routes
+│ │ │
+│ │ ├── services/ # Business logic
+│ │ │ ├── init.py
+│ │ │ ├── auth_service.py # Auth service
+│ │ │ └── search_service.py # Search service
+│ │ │
+│ │ └── utils/ # Utility functions
+│ │ ├── init.py
+│ │ ├── jwt_handler.py # JWT utilities
+│ │ ├── password_handler.py # Password utilities
+│ │ ├── data_loader.py # Dataset loader
+│ │ ├── similarity.py # Similarity calculation
+│ │ └── preprocessing.py # Text preprocessing
+│ │
+│ ├── datasets/ # CSV datasets
+│ │ ├── facebook_post.csv
+│ │ ├── instagram_post.csv
+│ │ ├── linkedin_post.csv
+│ │ └── merged_post.csv
+│ │
+│ ├── venv/ # Python virtual environment
+│ ├── .env # Environment variables
+│ ├── requirements.txt # Python dependencies
+│ ├── run.py # Server runner
+│ └── infinpost.db # SQLite database
 │
 ├── frontend/
-│   ├── public/
-│   ├── src/
-│   │
-│   ├── assets/
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Loader/
-│   │   ├── SearchBar/
-│   │   ├── TrendingSearches/
-│   │   └── PrivateRoute/
-│   │
-│   ├── contexts/
-│   │   └── AuthContext.jsx
-│   │
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── About.jsx
-│   │   ├── Login.jsx
-│   │   ├── Register.jsx
-│   │   ├── Profile.jsx
-│   │   ├── Results.jsx
-│   │   └── NotFound.jsx
-│   │
-│   ├── services/
-│   │   └── api.js
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
+│ ├── public/
+│ │ ├── favicon.svg
+│ │ └── icons.svg
+│ │
+│ ├── src/
+│ │ ├── assets/
+│ │ │ └── images/
+│ │ │ ├── logo.png
+│ │ │ └── hero.png
+│ │ │
+│ │ ├── components/
+│ │ │ ├── Navbar/
+│ │ │ │ ├── Navbar.jsx
+│ │ │ │ └── Navbar.css
+│ │ │ │
+│ │ │ ├── SearchBar/
+│ │ │ │ ├── SearchBar.jsx
+│ │ │ │ └── SearchBar.css
+│ │ │ │
+│ │ │ ├── TrendingSearches/
+│ │ │ │ ├── TrendingSearches.jsx
+│ │ │ │ └── TrendingSearches.css
+│ │ │ │
+│ │ │ ├── ThemeToggle/
+│ │ │ │ ├── ThemeToggle.jsx
+│ │ │ │ └── ThemeToggle.css
+│ │ │ │
+│ │ │ ├── Loader/
+│ │ │ │ ├── Loader.jsx
+│ │ │ │ └── Loader.css
+│ │ │ │
+│ │ │ ├── PrivateRoute/
+│ │ │ │ └── PrivateRoute.jsx
+│ │ │ │
+│ │ │ └── Footer/
+│ │ │ ├── Footer.jsx
+│ │ │ └── Footer.css
+│ │ │
+│ │ ├── contexts/
+│ │ │ ├── AuthContext.jsx # Authentication context
+│ │ │ └── ThemeContext.jsx # Theme context
+│ │ │
+│ │ ├── pages/
+│ │ │ ├── Home.jsx
+│ │ │ ├── Home.css
+│ │ │ ├── About.jsx
+│ │ │ ├── About.css
+│ │ │ ├── Login.jsx
+│ │ │ ├── Login.css
+│ │ │ ├── Register.jsx
+│ │ │ ├── Register.css
+│ │ │ ├── Profile.jsx
+│ │ │ ├── Profile.css
+│ │ │ ├── Results.jsx
+│ │ │ ├── Results.css
+│ │ │ └── NotFound.jsx
+│ │ │
+│ │ ├── services/
+│ │ │ └── api.js # API service layer
+│ │ │
+│ │ ├── styles/
+│ │ │ ├── global.css
+│ │ │ ├── animations.css
+│ │ │ └── variables.css
+│ │ │
+│ │ ├── hooks/
+│ │ │ └── useTheme.js # Theme hook
+│ │ │
+│ │ ├── utils/
+│ │ │ ├── constants.js
+│ │ │ ├── formatDate.js
+│ │ │ └── helpers.js
+│ │ │
+│ │ ├── App.jsx # Main App component
+│ │ ├── App.css
+│ │ ├── main.jsx # Entry point
+│ │ └── index.css
+│ │
+│ ├── .gitignore
+│ ├── eslint.config.js
+│ ├── index.html
+│ ├── package.json
+│ ├── package-lock.json
+│ ├── README.md
+│ └── vite.config.js
 │
-└── README.md
+├── docs/ # Documentation
+│ ├── API_Documentation.md
+│ ├── Screenshots.md
+│ └── architecture.png
+│
+├── screenshot/ # Screenshots
+│ ├── home.png
+│ ├── result.png
+│ ├── search.png
+│ └── darkmode.png
+│
+├── .gitignore
+└── README.md # This file
 ```
 
 ---
