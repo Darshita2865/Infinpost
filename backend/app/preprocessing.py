@@ -4,7 +4,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import string
 
-# Download NLTK data (first time only)
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
@@ -22,19 +21,10 @@ class TextPreprocessor:
         if not text:
             return ""
         
-        # Convert to lowercase
         text = text.lower()
-        
-        # Remove URLs
         text = re.sub(r'http\S+|www\S+|https\S+', '', text)
-        
-        # Remove mentions and hashtags
         text = re.sub(r'@\w+|\#', '', text)
-        
-        # Remove special characters and numbers
         text = re.sub(r'[^a-zA-Z\s]', '', text)
-        
-        # Remove extra whitespace
         text = re.sub(r'\s+', ' ', text).strip()
         
         return text
@@ -42,7 +32,6 @@ class TextPreprocessor:
     def tokenize(self, text: str) -> list:
         """Tokenize text into words"""
         tokens = word_tokenize(text)
-        # Remove stopwords
         tokens = [t for t in tokens if t not in self.stop_words]
         return tokens
     
