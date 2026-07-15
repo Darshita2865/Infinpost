@@ -24,19 +24,16 @@ class SimilarityCalculator:
         if self.vectors is None:
             return []
         
-        # Preprocess query
         processed_query = self.preprocessor.preprocess(query)
         query_vector = self.vectorizer.transform([processed_query])
         
-        # Calculate similarities
         similarities = cosine_similarity(query_vector, self.vectors).flatten()
         
-        # Get top k results
         top_indices = np.argsort(similarities)[-top_k:][::-1]
         
         results = []
         for idx in top_indices:
-            if similarities[idx] > 0.1:  # Threshold
+            if similarities[idx] > 0.1:  
                 results.append({
                     'text': self.texts[idx],
                     'similarity': float(similarities[idx])
